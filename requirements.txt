@@ -65,3 +65,4 @@ scandir==1.5
 six==1.10.0
 urllib3==1.21.1
 Werkzeug==0.12.2
+pip==9.0.1
