@@ -12,13 +12,13 @@ from flask import request
 from flask import url_for
 from FlaskWebProject1 import app
 # from models.azuretablestorage import get_gens
-from azure.storage import CloudStorageAccount
-from azure.storage.table import TableService, Entity
+# from azure.storage import CloudStorageAccount
+# from azure.storage.table import TableService, Entity
 # from azure.storage.queue import QueueService
 
 
 
-table_service = TableService(account_name='kuralbayevday1', account_key='8onfJI8YYDJ9pB+SLOcFycntsRnL+iJm6y7R0mhTk8mSKZs9bXBo1v19bdwYOW4ts09440t6Gct2H2JtvjosRQ==')
+# table_service = TableService(account_name='kuralbayevday1', account_key='8onfJI8YYDJ9pB+SLOcFycntsRnL+iJm6y7R0mhTk8mSKZs9bXBo1v19bdwYOW4ts09440t6Gct2H2JtvjosRQ==')
 
 @app.errorhandler(404)
 def not_found(error):
@@ -27,11 +27,11 @@ def not_found(error):
 
 @app.route('/todo/api/v1.0/generators', methods=['GET'])
 def get_generators():
-    generators = table_service.query_entities('generatorslist')
+    # generators = table_service.query_entities('generatorslist')
     # print type(tasks)
     # generators = get_gens()
-    return jsonify({'generators': map(make_public_generator, generators)})
-    # return "ok"
+    # return jsonify({'generators': map(make_public_generator, generators)})
+    return "ok"
 
 
 
